@@ -1,7 +1,7 @@
 <?php
-namespace App\QueryServise;
-require_once __DIR__ . '/../../vendor/autoload.php';
-use App\Dao\ContactDao;
+namespace App\Adapter\QueryServise;
+require_once __DIR__ . '/../../../vendor/autoload.php';
+use App\Infrastructure\Dao\ContactDao;
 use App\Domain\Entity\Contact;
 use App\Domain\ValueObject\ContactId;
 use App\Domain\ValueObject\ContactTitle;

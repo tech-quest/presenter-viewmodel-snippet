@@ -1,8 +1,11 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use App\Controller\ContactHistoryController;
-$contactHistoryController = new ContactHistoryController();
-$contacts = $contactHistoryController->view();
+use App\UseCase\UseCaseInteractor\ContactInteractor;
+use App\Presenter\ContactHistoryPresenter;
+
+$contactHistoryInteractor = new ContactHistoryInteractor();
+$historyPresenter = new ContactHistoryPresenter($contactInteractor->handler());
+$contacts = $historyPresenter->createHistoryView();
 ?>
 
 <!DOCTYPE html>

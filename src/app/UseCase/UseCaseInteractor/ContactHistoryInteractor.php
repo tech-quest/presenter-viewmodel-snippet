@@ -1,13 +1,13 @@
 <?php
 namespace App\UseCase\UseCaseInteractor;
 require_once __DIR__ . '/../../../vendor/autoload.php';
-use App\QueryServise\ContactQueryServise;
+use App\Adapter\QueryServise\ContactQueryServise;
 use App\UseCase\UseCaseOutput\ContactHistoryOutput;
 
 /**
  * お問い合わせ内容の全件表示のユースケース
  */
-final class ContactInteractor
+final class ContactHistoryInteractor
 {
     /**
      * @var ContactQueryServise
