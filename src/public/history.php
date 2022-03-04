@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 use App\UseCase\UseCaseInteractor\ContactHistoryInteractor;
-use App\Presenter\ContactHistoryPresenter;
+use App\Adapter\Presenter\ContactHistoryPresenter;
 
 $contactHistoryInteractor = new ContactHistoryInteractor();
 $historyPresenter = new ContactHistoryPresenter(
